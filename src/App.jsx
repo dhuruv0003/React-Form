@@ -13,7 +13,9 @@ function App() {
     city: "",
     state: "",
     postal: "",
-    isvisible:true
+    comments:false,
+    candidates:false,
+    offers:false
   }
   const [formdata, setformdata] = useState(obj)
   function changehandler(event) {
@@ -97,10 +99,18 @@ function App() {
           className=' border-2 border-black'
         />
 
-        <label htmlFor="emailcheck">By Email</label>
-        <input type="checkbox" name='comment' onChange={changehandler} checked={formdata.isvisible}/>
-        <input type="checkbox" name='candidates' onChange={changehandler} checked={formdata.isvisible}/>
-        <input type="checkbox" name='offers'onChange={changehandler}  checked={formdata.isvisible}/>
+      <fieldset>
+        <legend>By Email</legend>
+        <label htmlFor="comments">comments </label>
+        <input type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments}/>
+        <br />
+        <label htmlFor="candidates">candidates </label>
+        <input type="checkbox" name='candidates' id='candidates' onChange={changehandler} checked={formdata.candidates}/>
+        <br />
+        <label htmlFor="offers">offers </label>
+        <input type="checkbox" name='offers' id='offers' onChange={changehandler}  checked={formdata.offers}/>
+      </fieldset>
+        
 
         <br/>
         <button>Click Me😊</button>
