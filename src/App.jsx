@@ -11,7 +11,8 @@ function App() {
     country: "",
     streetad: "",
     city: "",
-    state:""
+    state: "",
+    postal: ""
   }
   const [formdata, setformdata] = useState(obj)
   function changehandler(event) {
@@ -84,6 +85,15 @@ function App() {
           name='state'
           onChange={changehandler}
           value={formdata.state}
+          className=' border-2 border-black'
+        />
+
+        <label htmlFor="postal">Postal Code</label>
+        <input type="text"
+          placeholder='123456'
+          onChange={changehandler}
+          name='postal'
+          value={formdata.postal}
           className=' border-2 border-black'
         />
 
