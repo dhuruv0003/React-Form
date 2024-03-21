@@ -18,12 +18,11 @@ function App() {
   const [formdata, setformdata] = useState(obj)
   function changehandler(event) {
     let { name, type, value, checked } = event.target;
-    setformdata((prevdata) => {
-      return {
+    setformdata((prevdata) => ({
         ...prevdata,
         [name]: type === "checkbox" ? checked : value
-      }
-    })
+      })
+    )
   }
 
   function submithandler(event) {
