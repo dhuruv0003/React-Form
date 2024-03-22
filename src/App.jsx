@@ -101,14 +101,28 @@ function App() {
 
         <fieldset>
           <legend>By Email</legend>
-          <label htmlFor="comments">Comments </label>
-          <input type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments} />
-          <br />
-          <label htmlFor="candidates">candidates </label>
-          <input type="checkbox" name='candidates' id='candidates' onChange={changehandler} checked={formdata.candidates} />
-          <br />
-          <label htmlFor="offers">offers </label>
-          <input type="checkbox" name='offers' id='offers' onChange={changehandler} checked={formdata.offers} />
+
+          <div className="">
+            <input type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments} />
+            <label htmlFor="comments"> Comments</label>
+            <p className=' ml-4'>Get notified when someone posts a comment on posting</p>
+          </div>
+
+
+          <div className="">
+            <input type="checkbox" name='candidates' id='candidates' onChange={changehandler} checked={formdata.candidates} />
+            <label htmlFor="candidates"> Candidates</label>
+            <p className=' ml-4'>Get notified when someone posts a comment on posting</p>
+          </div>
+
+
+          <div className="">
+            <input type="checkbox" name='offers' id='offers' onChange={changehandler} checked={formdata.offers} />
+            <label htmlFor="offers"> Offers</label>
+            <p className=' ml-4'>Get notified when someone posts a comment on posting</p>
+          </div>
+
+
         </fieldset>
 
 
