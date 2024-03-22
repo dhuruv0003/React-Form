@@ -4,26 +4,26 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  let obj = {
+  const obj = {
     firstname: "",
     lastname: "",
     email: "",
-    country: "",
+    country: "India",
     streetad: "",
     city: "",
     state: "",
     postal: "",
-    comments:false,
-    candidates:false,
-    offers:false
+    comments: false,
+    candidates: false,
+    offers: false
   }
   const [formdata, setformdata] = useState(obj)
   function changehandler(event) {
     let { name, type, value, checked } = event.target;
     setformdata((prevdata) => ({
-        ...prevdata,
-        [name]: type === "checkbox" ? checked : value
-      })
+      ...prevdata,
+      [name]: type === "checkbox" ? checked : value
+    })
     )
   }
 
@@ -64,7 +64,7 @@ function App() {
           <option value="USA">USA</option>
         </select>
 
-        <label htmlFor="street">street Adress</label>
+        <label htmlFor="streetad">street Adress</label>
         <input type="text" placeholder='114 O block'
           onChange={changehandler}
           name='streetad'
@@ -99,20 +99,20 @@ function App() {
           className=' border-2 border-black'
         />
 
-      <fieldset>
-        <legend>By Email</legend>
-        <label htmlFor="comments">comments </label>
-        <input type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments}/>
-        <br />
-        <label htmlFor="candidates">candidates </label>
-        <input type="checkbox" name='candidates' id='candidates' onChange={changehandler} checked={formdata.candidates}/>
-        <br />
-        <label htmlFor="offers">offers </label>
-        <input type="checkbox" name='offers' id='offers' onChange={changehandler}  checked={formdata.offers}/>
-      </fieldset>
-        
+        <fieldset>
+          <legend>By Email</legend>
+          <label htmlFor="comments">Comments </label>
+          <input type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments} />
+          <br />
+          <label htmlFor="candidates">candidates </label>
+          <input type="checkbox" name='candidates' id='candidates' onChange={changehandler} checked={formdata.candidates} />
+          <br />
+          <label htmlFor="offers">offers </label>
+          <input type="checkbox" name='offers' id='offers' onChange={changehandler} checked={formdata.offers} />
+        </fieldset>
 
-        <br/>
+
+        <br />
         <button>Click Me😊</button>
       </form>
 
