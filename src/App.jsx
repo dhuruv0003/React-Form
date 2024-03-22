@@ -15,7 +15,8 @@ function App() {
     postal: "",
     comments: false,
     candidates: false,
-    offers: false
+    offers: false,
+    pushnotification: ""
   }
   const [formdata, setformdata] = useState(obj)
   function changehandler(event) {
@@ -122,17 +123,51 @@ function App() {
             <p className=' ml-4'>Get notified when someone posts a comment on posting</p>
           </div>
 
+        </fieldset>
+        <br />
 
+        <fieldset className='relative right-9'>
+          <legend>Push Notification</legend>
+          <p>These are delivered via sms to your mobile phone</p>
+
+          <div className="flex flex-col">
+            <div className="">
+              <input type="radio" 
+              name="pushnotification" 
+              id='pushEverything'
+              value="everything"
+              onChange={changehandler} />
+              <label htmlFor="pushEverything">  EveryThing</label>
+            </div>
+
+            <div className="">
+              <input type="radio" 
+              onChange={changehandler}
+              name="pushnotification"
+              value="same as email"
+               id='sameemail' />
+              <label htmlFor="sameemail"> Same As Email</label>
+            </div>
+
+            <div className="">
+              <input type="radio"
+               name="pushnotification" 
+               onChange={changehandler}
+               value="nopush"
+               id='nopush' />
+              <label htmlFor="nopush"> No Push Notifications</label>
+            </div>
+          </div>
         </fieldset>
 
-
         <br />
+
         <button>Click Me😊</button>
+
       </form>
 
-
     </div>
-  )
+  );
 }
 
 export default App
