@@ -34,77 +34,80 @@ function App() {
   }
 
   return (
-    <div>
-      <form onSubmit={submithandler} action="" className=" flex flex-col justify-center items-center">
-        <label htmlFor="firstname">First Name</label>
-        <input type="text" placeholder='Dhuruv' name="firstname"
-          onChange={changehandler}
-          value={formdata.firstname}
-          className=' border-2 border-black'
-        />
+    <div className=' h-[100vh]w-[100vw]'>
+      <form onSubmit={submithandler} action="" className="">
+        <div className=' flex flex-col justify-center items-center'>
+          <label htmlFor="firstname">First Name</label>
+          <input type="text" placeholder='Dhuruv' name="firstname"
+            onChange={changehandler}
+            value={formdata.firstname}
+            className='w-[70vw] border-2 border-blue-300'
+          />
 
-        <label htmlFor="lastname">Last Name</label>
-        <input type="text" placeholder='Kumar' name="lastname"
-          onChange={changehandler}
-          value={formdata.lastname}
-          className=' border-2 border-black'
-        />
+          <label htmlFor="lastname">Last Name</label>
+          <input type="text" placeholder='Kumar' name="lastname"
+            onChange={changehandler}
+            value={formdata.lastname}
+            className='w-[70vw] border-2 border-blue-300'
+          />
 
-        <label htmlFor="email">Email Adress</label>
-        <input type="email" placeholder='dhruvdk02@gmial.com'
-          onChange={changehandler}
-          name='email'
-          value={formdata.email}
-          className=' border-2 border-black'
-        />
+          <label htmlFor="email">Email Adress</label>
+          <input type="email" placeholder='dhruvdk02@gmial.com'
+            onChange={changehandler}
+            name='email'
+            value={formdata.email}
+            className='w-[70vw] border-2 border-blue-300'
+          />
 
-        <label htmlFor="country">Country</label>
-        <select name="country" onChange={changehandler} className=' border-2 border-black' id="">
-          <option value="India">India</option>
-          <option value="UK">UK</option>
-          <option value="USA">USA</option>
-        </select>
+          <label htmlFor="country">Country</label>
+          <select name="country" onChange={changehandler} className='w-[70vw] border-2 rounded-full p-1 border-blue-300 align-sub' id="">
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+            <option value="USA">USA</option>
+          </select>
 
-        <label htmlFor="streetad">street Adress</label>
-        <input type="text" placeholder='114 O block'
-          onChange={changehandler}
-          name='streetad'
-          value={formdata.streetad}
-          className=' border-2 border-black'
-        />
+          <label htmlFor="streetad">street Adress</label>
+          <input type="text" placeholder='114 O block'
+            onChange={changehandler}
+            name='streetad'
+            value={formdata.streetad}
+            className='w-[70vw] border-2 border-blue-300'
+          />
 
-        <label htmlFor="city">City</label>
-        <input type="text"
-          placeholder='Noida'
-          name='city'
-          onChange={changehandler}
-          value={formdata.city}
-          className=' border-2 border-black'
-        />
+          <label htmlFor="city">City</label>
+          <input type="text"
+            placeholder='Noida'
+            name='city'
+            onChange={changehandler}
+            value={formdata.city}
+            className='w-[70vw] border-2 border-blue-300'
+          />
 
-        <label htmlFor="state">State</label>
-        <input type="text"
-          placeholder='Uttar Pradesh'
-          name='state'
-          onChange={changehandler}
-          value={formdata.state}
-          className=' border-2 border-black'
-        />
+          <label htmlFor="state">State</label>
+          <input type="text"
+            placeholder='Uttar Pradesh'
+            name='state'
+            onChange={changehandler}
+            value={formdata.state}
+            className='w-[70vw] border-2 border-blue-300'
+          />
 
-        <label htmlFor="postal">Postal Code</label>
-        <input type="text"
-          placeholder='123456'
-          onChange={changehandler}
-          name='postal'
-          value={formdata.postal}
-          className=' border-2 border-black'
-        />
-
-        <fieldset>
+          <label htmlFor="postal">Postal Code</label>
+          <input type="text"
+            placeholder='123456'
+            onChange={changehandler}
+            name='postal'
+            value={formdata.postal}
+            className='w-[70vw] border-2 border-blue-300'
+          />
+        </div>
+        <br /><br />
+        <fieldset className=' mx-[9rem] '>
           <legend>By Email</legend>
 
+
           <div className="">
-            <input type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments} />
+            <input className=" "type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments} />
             <label htmlFor="comments"> Comments</label>
             <p className=' ml-4'>Get notified when someone posts a comment on posting</p>
           </div>
@@ -126,35 +129,35 @@ function App() {
         </fieldset>
         <br />
 
-        <fieldset className='relative right-9'>
+        <fieldset className='mx-[9rem]'>
           <legend>Push Notification</legend>
           <p>These are delivered via sms to your mobile phone</p>
 
           <div className="flex flex-col">
             <div className="">
-              <input type="radio" 
-              name="pushnotification" 
-              id='pushEverything'
-              value="everything"
-              onChange={changehandler} />
+              <input type="radio"
+                name="pushnotification"
+                id='pushEverything'
+                value="everything"
+                onChange={changehandler} />
               <label htmlFor="pushEverything">  EveryThing</label>
             </div>
 
             <div className="">
-              <input type="radio" 
-              onChange={changehandler}
-              name="pushnotification"
-              value="same as email"
-               id='sameemail' />
+              <input type="radio"
+                onChange={changehandler}
+                name="pushnotification"
+                value="same as email"
+                id='sameemail' />
               <label htmlFor="sameemail"> Same As Email</label>
             </div>
 
             <div className="">
               <input type="radio"
-               name="pushnotification" 
-               onChange={changehandler}
-               value="nopush"
-               id='nopush' />
+                name="pushnotification"
+                onChange={changehandler}
+                value="nopush"
+                id='nopush' />
               <label htmlFor="nopush"> No Push Notifications</label>
             </div>
           </div>
@@ -162,11 +165,13 @@ function App() {
 
         <br />
 
-        <button className='rounded-md bg-blue-600 p-2 font-bold text-white'>Click Me😊</button>
+        <button className='mx-[9rem] rounded-md bg-blue-600 p-2 font-bold text-white'>Click Me😊</button>
 
-      </form>
 
-    </div>
+
+      </form >
+
+    </div >
   );
 }
 
