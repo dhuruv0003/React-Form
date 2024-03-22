@@ -34,9 +34,10 @@ function App() {
   }
 
   return (
-    <div className=' h-[100vh]w-[100vw]'>
-      <form onSubmit={submithandler} action="" className="">
-        <div className=' flex flex-col justify-center items-center'>
+    <div className=' h-[100vh] w-[100vw]'>
+      <h1 className='my-3 text-center font-bold text-3xl '>My Form</h1>
+      <form onSubmit={submithandler} action="" className="w-[70%] mx-auto">
+        <div className=' flex flex-col justify-center items-center gap-3'>
           <label htmlFor="firstname">First Name</label>
           <input type="text" placeholder='Dhuruv' name="firstname"
             onChange={changehandler}
@@ -102,12 +103,14 @@ function App() {
           />
         </div>
         <br /><br />
-        <fieldset className=' mx-[9rem] '>
+
+
+        <fieldset className=' flex flex-col justify-center items-start '>
           <legend>By Email</legend>
 
 
           <div className="">
-            <input className=" "type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments} />
+            <input className=" " type="checkbox" name='comments' id='comments' onChange={changehandler} checked={formdata.comments} />
             <label htmlFor="comments"> Comments</label>
             <p className=' ml-4'>Get notified when someone posts a comment on posting</p>
           </div>
@@ -129,12 +132,12 @@ function App() {
         </fieldset>
         <br />
 
-        <fieldset className='mx-[9rem]'>
+        <fieldset className='flex flex-col '>
           <legend>Push Notification</legend>
-          <p>These are delivered via sms to your mobile phone</p>
+          <p className=''>These are delivered via sms to your mobile phone</p>
 
-          <div className="flex flex-col">
-            <div className="">
+          <div className="">
+            <div className=" ">
               <input type="radio"
                 name="pushnotification"
                 id='pushEverything'
@@ -159,13 +162,17 @@ function App() {
                 value="nopush"
                 id='nopush' />
               <label htmlFor="nopush"> No Push Notifications</label>
-            </div>
-          </div>
+            </div></div>
+
+
+
         </fieldset>
 
         <br />
 
-        <button className='mx-[9rem] rounded-md bg-blue-600 p-2 font-bold text-white'>Click Me😊</button>
+        <div className="w-0 mx-auto">
+        <button className='w-[8rem] rounded-md bg-blue-600 p-2 font-bold text-white'>Click Me😊</button>
+        </div>
 
 
 
