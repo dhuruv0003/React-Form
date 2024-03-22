@@ -162,7 +162,7 @@ function App() {
 
         <br />
 
-        <button>Click Me😊</button>
+        <button className='rounded-md bg-blue-600 p-2 font-bold text-white'>Click Me😊</button>
 
       </form>
 
